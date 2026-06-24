@@ -1,0 +1,20 @@
+# Ignore misplaced root duplicates. The real Vite app source lives in src/.
+/components/
+/data/
+/lib/
+/migrations/
+/record/
+/App.jsx
+/ProgressPage.jsx
+/TeacherTasksPage.jsx
+/studentProgress.js
+/teacherTasks.js
+/styles.css
+
+# Local/development artifacts
+node_modules/
+dist/
+build/
+*.log
+.env
+.env.local

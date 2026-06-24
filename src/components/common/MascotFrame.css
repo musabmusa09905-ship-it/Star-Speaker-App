@@ -1,0 +1,151 @@
+.mascot-frame {
+  --mascot-frame-size: 72px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--mascot-frame-size);
+  height: var(--mascot-frame-size);
+  min-width: var(--mascot-frame-size);
+  max-width: 100%;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(153, 27, 46, 0.12);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 62% 14%, rgba(153, 27, 46, 0.12), transparent 48%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 247, 0.74));
+  box-shadow:
+    0 14px 32px rgba(31, 24, 22, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.76);
+  isolation: isolate;
+  line-height: 0;
+}
+
+.mascot-frame--xs {
+  --mascot-frame-size: 48px;
+  border-radius: 14px;
+}
+
+.mascot-frame--sm {
+  --mascot-frame-size: 72px;
+  border-radius: 18px;
+}
+
+.mascot-frame--md {
+  --mascot-frame-size: 96px;
+  border-radius: 20px;
+}
+
+.mascot-frame--lg {
+  --mascot-frame-size: 128px;
+  border-radius: 24px;
+}
+
+.mascot-frame--empty {
+  --mascot-frame-size: 180px;
+  border-radius: 28px;
+}
+
+.mascot-frame--plain {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+.mascot-frame--card {
+  background:
+    radial-gradient(circle at 58% 12%, rgba(225, 29, 72, 0.16), transparent 48%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 241, 245, 0.86));
+}
+
+.mascot-frame--soft {
+  background:
+    radial-gradient(circle at 60% 12%, rgba(153, 27, 46, 0.1), transparent 48%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 247, 249, 0.72));
+}
+
+.mascot-frame--dark {
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at 48% 12%, rgba(176, 18, 45, 0.2), transparent 48%),
+    linear-gradient(145deg, #1d202a, #11131a);
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.mascot-frame__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 50% 75%;
+}
+
+.mascot-frame.is-animated .mascot-frame__image {
+  will-change: transform, opacity;
+}
+
+html[data-theme="dark"] .mascot-frame {
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at 56% 16%, rgba(176, 18, 45, 0.18), transparent 46%),
+    linear-gradient(145deg, rgba(35, 38, 49, 0.95), rgba(17, 19, 26, 0.96));
+  box-shadow:
+    0 18px 44px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+}
+
+html[data-theme="dark"] .mascot-frame--plain {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .mascot-frame--card {
+  background:
+    radial-gradient(circle at 48% 14%, rgba(225, 29, 72, 0.22), transparent 48%),
+    linear-gradient(145deg, rgba(35, 38, 49, 0.98), rgba(17, 19, 26, 0.98));
+}
+
+html[data-theme="dark"] .mascot-frame--soft {
+  background:
+    radial-gradient(circle at 54% 16%, rgba(176, 18, 45, 0.16), transparent 46%),
+    linear-gradient(145deg, rgba(29, 32, 42, 0.94), rgba(17, 19, 26, 0.94));
+}
+
+@media (max-width: 767px) {
+  .mascot-frame--xs {
+    --mascot-frame-size: 44px;
+    border-radius: 13px;
+  }
+
+  .mascot-frame--sm {
+    --mascot-frame-size: 56px;
+    border-radius: 16px;
+  }
+
+  .mascot-frame--md {
+    --mascot-frame-size: 72px;
+    border-radius: 18px;
+  }
+
+  .mascot-frame--lg {
+    --mascot-frame-size: 96px;
+    border-radius: 22px;
+  }
+
+  .mascot-frame--empty {
+    --mascot-frame-size: 120px;
+    border-radius: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-frame,
+  .mascot-frame__image {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    will-change: auto !important;
+  }
+}

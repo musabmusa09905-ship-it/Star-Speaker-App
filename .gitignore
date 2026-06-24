@@ -1,0 +1,24 @@
+node_modules/
+dist/
+build/
+test-screenshots/
+*.log
+vite-dev.log
+vite-dev.err.log
+vite-preview.log
+vite-preview.err.log
+.env
+.env.local
+
+# Misplaced root duplicates. Keep app source under src/ and migrations under supabase/migrations/.
+/components/
+/data/
+/lib/
+/migrations/
+/record/
+/App.jsx
+/ProgressPage.jsx
+/TeacherTasksPage.jsx
+/studentProgress.js
+/teacherTasks.js
+/styles.css

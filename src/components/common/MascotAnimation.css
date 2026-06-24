@@ -1,0 +1,640 @@
+.mascot-animation {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  isolation: isolate;
+  overflow: visible;
+  line-height: 0;
+  flex: 0 0 auto;
+}
+
+.mascot-animation__frame {
+  grid-area: 1 / 1;
+  z-index: 2;
+}
+
+.mascot-animation__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transform-origin: 50% 75%;
+  will-change: transform, opacity;
+  z-index: 2;
+}
+
+.mascot-animation--welcome.is-looping .mascot-animation__image {
+  animation: mascotWelcome 2.4s ease-in-out infinite;
+}
+
+.mascot-animation--speaking.is-looping .mascot-animation__image,
+.mascot-animation--explaining.is-looping .mascot-animation__image {
+  animation: mascotSpeaking 1.2s ease-in-out infinite;
+}
+
+.mascot-animation--celebration .mascot-animation__image {
+  animation: mascotCelebration 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.mascot-animation--celebration.is-looping .mascot-animation__image {
+  animation: mascotCelebrationLoop 1.8s ease-in-out infinite;
+}
+
+.mascot-animation--thinking.is-looping .mascot-animation__image {
+  animation: mascotThinking 2.8s ease-in-out infinite;
+}
+
+.mascot-animation--encouragement.is-looping .mascot-animation__image {
+  animation: mascotEncouragement 2s ease-in-out infinite;
+}
+
+.mascot-animation--progress.is-looping .mascot-animation__image {
+  animation: mascotProgress 1.8s ease-in-out infinite;
+}
+
+.mascot-animation.mascot-idle.is-looping .mascot-animation__image,
+.mascot-animation.mascot-wave.is-looping .mascot-animation__image {
+  animation: mascotIdlePremium 4.8s ease-in-out infinite;
+}
+
+.mascot-animation.mascot-wave.is-looping .mascot-animation__image {
+  animation-name: mascotWavePremium;
+}
+
+.mascot-animation.mascot-celebrate .mascot-animation__image {
+  animation: mascotCelebratePremium 0.9s cubic-bezier(0.18, 0.9, 0.24, 1) both;
+}
+
+.mascot-animation.mascot-celebrate.is-looping .mascot-animation__image {
+  animation: mascotCelebrateLoopPremium 5.2s ease-in-out infinite;
+}
+
+.mascot-animation.mascot-thinking.is-looping .mascot-animation__image {
+  animation: mascotThinkingPremium 4.2s ease-in-out infinite;
+}
+
+.mascot-animation.mascot-progress.is-looping .mascot-animation__image {
+  animation: mascotProgressPremium 4.2s ease-in-out infinite;
+}
+
+.mascot-animation.mascot-attention.is-looping .mascot-animation__image {
+  animation: mascotAttentionPremium 4.6s ease-in-out infinite;
+}
+
+.mascot-animation.mascot-static .mascot-animation__image {
+  animation: none;
+}
+
+.mascot-decoration {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  line-height: 1;
+}
+
+.mascot-decoration--greeting {
+  top: 14%;
+  right: 10%;
+  width: 34px;
+  height: 30px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 12px 30px var(--color-crimson-glow, rgba(153, 27, 46, 0.16));
+  animation: mascotDecorationPulse 4.2s ease-in-out infinite;
+}
+
+.mascot-decoration--greeting::after {
+  content: "";
+  position: absolute;
+  right: 7px;
+  bottom: -5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 0 0 999px 0;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+.mascot-decoration--greeting span {
+  position: absolute;
+  inset: 9px 10px;
+  background: var(--color-crimson, #991b2e);
+  clip-path: polygon(50% 18%, 62% 0, 79% 0, 94% 14%, 94% 34%, 50% 78%, 6% 34%, 6% 14%, 21% 0, 38% 0);
+  animation: mascotGreetingHeart 3.8s ease-in-out infinite;
+}
+
+.mascot-decoration--speech {
+  top: 15%;
+  right: 3%;
+  width: 56px;
+  height: 40px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(153, 27, 46, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  animation: mascotDecorationPulse 3.8s ease-in-out infinite;
+}
+
+.mascot-decoration--speech::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  bottom: -5px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.mascot-decoration--speech i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-crimson, #991b2e);
+  opacity: 0.76;
+  animation: mascotDot 2.8s ease-in-out infinite;
+}
+
+.mascot-decoration--speech i:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.mascot-decoration--speech i:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.mascot-decoration--confetti {
+  inset: 0;
+  z-index: 3;
+}
+
+.mascot-decoration--confetti i {
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--color-crimson, #991b2e);
+  opacity: 0;
+  animation: mascotConfetti 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.mascot-decoration--confetti i:nth-child(1) {
+  left: 18%;
+  top: 18%;
+  transform: rotate(-18deg);
+}
+
+.mascot-decoration--confetti i:nth-child(2) {
+  left: 36%;
+  top: 6%;
+  background: #fff;
+  box-shadow: inset 0 0 0 2px rgba(153, 27, 46, 0.22);
+  animation-delay: 0.08s;
+}
+
+.mascot-decoration--confetti i:nth-child(3) {
+  right: 28%;
+  top: 10%;
+  transform: rotate(18deg);
+  animation-delay: 0.16s;
+}
+
+.mascot-decoration--confetti i:nth-child(4) {
+  right: 12%;
+  top: 34%;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  animation-delay: 0.22s;
+}
+
+.mascot-decoration--confetti i:nth-child(5) {
+  left: 10%;
+  top: 42%;
+  width: 12px;
+  height: 12px;
+  clip-path: polygon(50% 0, 64% 34%, 100% 38%, 72% 61%, 80% 100%, 50% 79%, 20% 100%, 28% 61%, 0 38%, 36% 34%);
+  animation-delay: 0.28s;
+}
+
+.mascot-decoration--thought {
+  top: 8%;
+  right: 4%;
+  min-width: 44px;
+  height: 38px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--color-crimson, #991b2e);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+  box-shadow: 0 14px 34px rgba(153, 27, 46, 0.12);
+  animation: mascotDecorationPulse 4.2s ease-in-out infinite;
+}
+
+.mascot-decoration--thought::before,
+.mascot-decoration--thought::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(153, 27, 46, 0.08);
+}
+
+.mascot-decoration--thought::before {
+  width: 12px;
+  height: 12px;
+  left: -12px;
+  bottom: -6px;
+}
+
+.mascot-decoration--thought::after {
+  width: 7px;
+  height: 7px;
+  left: -22px;
+  bottom: -15px;
+}
+
+.mascot-decoration--heart-glow {
+  inset: 15%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(153, 27, 46, 0.16), rgba(153, 27, 46, 0) 68%);
+  animation: mascotGlow 4.4s ease-in-out infinite;
+}
+
+.mascot-decoration--progress {
+  right: -3%;
+  bottom: 15%;
+  width: 72px;
+  height: 54px;
+  display: grid;
+  align-content: end;
+  gap: 5px;
+  z-index: 3;
+}
+
+.mascot-decoration--progress i {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(153, 27, 46, 0.18), var(--color-crimson, #991b2e));
+  transform-origin: left center;
+  animation: mascotProgressBar 1.15s ease-out both;
+}
+
+.mascot-decoration--progress i:nth-child(1) {
+  width: 48px;
+}
+
+.mascot-decoration--progress i:nth-child(2) {
+  width: 60px;
+  animation-delay: 0.12s;
+}
+
+.mascot-decoration--progress i:nth-child(3) {
+  width: 72px;
+  animation-delay: 0.24s;
+}
+
+.mascot-decoration--progress b {
+  position: absolute;
+  right: -2px;
+  top: -12px;
+  width: 26px;
+  height: 26px;
+  transform: rotate(-38deg);
+  animation: mascotArrowRise 1.4s ease-out both;
+}
+
+.mascot-decoration--progress b::before,
+.mascot-decoration--progress b::after {
+  content: "";
+  position: absolute;
+  background: var(--color-crimson, #991b2e);
+  border-radius: 999px;
+}
+
+.mascot-decoration--progress b::before {
+  width: 24px;
+  height: 5px;
+  top: 11px;
+  left: 1px;
+}
+
+.mascot-decoration--progress b::after {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px 999px 3px 3px;
+  right: 0;
+  top: 7px;
+  transform: rotate(45deg);
+}
+
+@keyframes mascotWelcome {
+  0%,
+  100% {
+    transform: translate3d(-2px, 0, 0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translate3d(2px, -6px, 0) rotate(2deg);
+  }
+}
+
+@keyframes mascotSpeaking {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-4px) scale(1.03);
+  }
+}
+
+@keyframes mascotCelebration {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) rotate(-2deg);
+  }
+
+  62% {
+    opacity: 1;
+    transform: scale(1.08) rotate(1.5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes mascotCelebrationLoop {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-5px) scale(1.04);
+  }
+}
+
+@keyframes mascotThinking {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-0.8deg);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(0.8deg);
+  }
+}
+
+@keyframes mascotEncouragement {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-4px) rotate(-1.5deg) scale(1.028);
+  }
+}
+
+@keyframes mascotProgress {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  45% {
+    transform: translateY(-6px) scale(1.028);
+  }
+}
+
+@keyframes mascotDecorationPulse {
+  0%,
+  100% {
+    opacity: 0.86;
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.04);
+  }
+}
+
+@keyframes mascotGreetingHeart {
+  0%,
+  100% {
+    opacity: 0.78;
+    transform: translateY(0) scale(0.96);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.05);
+  }
+}
+
+@keyframes mascotDot {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.42;
+  }
+
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+@keyframes mascotConfetti {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.8) rotate(0);
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-34px) scale(1) rotate(42deg);
+  }
+}
+
+@keyframes mascotGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.96);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes mascotProgressBar {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.18);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes mascotArrowRise {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) rotate(-38deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-38deg);
+  }
+}
+
+@keyframes mascotIdlePremium {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -3px, 0) scale(1.01);
+  }
+}
+
+@keyframes mascotWavePremium {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-0.35deg) scale(1);
+  }
+
+  48% {
+    transform: translate3d(1px, -3px, 0) rotate(1.2deg) scale(1.008);
+  }
+}
+
+@keyframes mascotCelebratePremium {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0) scale(1);
+  }
+
+  42% {
+    transform: translate3d(0, -5px, 0) rotate(0.8deg) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0) scale(1);
+  }
+}
+
+@keyframes mascotCelebrateLoopPremium {
+  0%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  88% {
+    transform: translate3d(0, -4px, 0) scale(1.025);
+  }
+}
+
+@keyframes mascotThinkingPremium {
+  0%,
+  100% {
+    transform: translate3d(-1px, 0, 0) rotate(-0.45deg);
+  }
+
+  50% {
+    transform: translate3d(2px, -2px, 0) rotate(0.45deg);
+  }
+}
+
+@keyframes mascotProgressPremium {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  45% {
+    transform: translate3d(0, -4px, 0) scale(1.018);
+  }
+}
+
+@keyframes mascotAttentionPremium {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  46% {
+    transform: translate3d(0, -2px, 0) scale(1.014);
+  }
+}
+
+html[data-theme="dark"] .mascot-decoration--greeting,
+html[data-theme="dark"] .mascot-decoration--speech,
+html[data-theme="dark"] .mascot-decoration--thought {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(circle at 70% 15%, rgba(176, 18, 45, 0.18), transparent 42%),
+    linear-gradient(135deg, #232631, #171922);
+  color: #ffd0d8;
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+html[data-theme="dark"] .mascot-decoration--greeting::after,
+html[data-theme="dark"] .mascot-decoration--speech::after,
+html[data-theme="dark"] .mascot-decoration--thought::before,
+html[data-theme="dark"] .mascot-decoration--thought::after {
+  background: #232631;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+html[data-theme="dark"] .mascot-decoration--speech i,
+html[data-theme="dark"] .mascot-decoration--greeting span,
+html[data-theme="dark"] .mascot-decoration--confetti i {
+  background: #d43a50;
+}
+
+html[data-theme="dark"] .mascot-decoration--confetti i:nth-child(2) {
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-animation *,
+  .mascot-animation::before,
+  .mascot-animation::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .mascot-decoration {
+    opacity: 0.82;
+  }
+}
+
