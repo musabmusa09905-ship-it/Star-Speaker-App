@@ -42,9 +42,9 @@ export function LoginPage({ onLoginSuccess }) {
         </div>
 
         <div className="auth-card__intro">
-          <p className="card-eyebrow card-eyebrow--red">Heart of English</p>
-          <h1 id="login-title">Sign in to your account</h1>
-          <p>Use the account created by your school team to continue.</p>
+          <p className="card-eyebrow card-eyebrow--red">Star Speaker</p>
+          <h1 id="login-title">Step into your speaking system</h1>
+          <p>Continue your daily voice practice, expert feedback, and confidence work.</p>
         </div>
 
         <form className="auth-form" onSubmit={handleSubmit}>
@@ -89,7 +89,7 @@ export function LoginPage({ onLoginSuccess }) {
         </form>
 
         <p className="auth-card__note">
-          Public sign-up is not open yet. Your school team creates student and teacher
+          Public sign-up is not open yet. Star Speaker creates private student and teacher
           accounts.
         </p>
       </section>

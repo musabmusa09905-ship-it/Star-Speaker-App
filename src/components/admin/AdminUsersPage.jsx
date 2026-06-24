@@ -84,7 +84,7 @@ const roleGroups = [
 const presetOptions = {
   main_goal: [
     "Speaking confidence",
-    "Daily English habit",
+    "Daily speaking practice",
     "IELTS speaking",
     "IELTS writing",
     "Flight attendant interview",
@@ -137,7 +137,7 @@ const presetOptions = {
     "Read aloud and submit audio",
     "IELTS answer practice",
     "Interview answer practice",
-    "Build a daily English habit"
+    "Build daily speaking confidence"
   ],
   preferred_practice_time: [
     "Morning",

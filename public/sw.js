@@ -1,11 +1,11 @@
 self.addEventListener("push", (event) => {
   const payload = readPushPayload(event);
-  const title = payload.title || "Heart of English";
+  const title = payload.title || "Star Speaker";
   const options = {
     body: payload.body || "You have something waiting in the app.",
-    icon: payload.icon || "/app-icon.png",
-    badge: payload.badge || "/favicon.png",
-    tag: payload.tag || "heart-of-english",
+    icon: payload.icon || "/assets/star-speaker/android-chrome-192x192.png",
+    badge: payload.badge || "/assets/star-speaker/favicon-32x32.png",
+    tag: payload.tag || "star-speaker",
     data: {
       url: normalizeNotificationUrl(payload.target_url || payload.url || payload.path || "/"),
       notificationId: payload.notification_id || null,

@@ -9,16 +9,16 @@ export function BrandLogo({ compact = false, className = "" }) {
     <a
       className={`brand-logo ${compact ? "brand-logo--compact" : ""} ${className}`}
       href="/"
-      aria-label="Heart of English home"
+      aria-label="Star Speaker home"
     >
       <img
         src={logoAsset.src}
         data-fallback-src={logoAsset.fallbackSrc}
-        alt="Heart of English"
+        alt="Star Speaker"
         className="brand-logo__image"
         onError={replaceWithFallbackImage}
       />
-      <span className="brand-logo__fallback">Heart of English</span>
+      <span className="brand-logo__fallback">Star Speaker</span>
     </a>
   );
 }

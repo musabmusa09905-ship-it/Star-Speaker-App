@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Heart of English student habit dashboard for daily English speaking practice, streaks, feedback, and weekly progress."
+      content="Star Speaker speaking system for daily voice practice, expert feedback, confidence, and measurable progress."
     />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/app-icon.png" />
-    <meta name="application-name" content="Heart of English" />
-    <meta name="apple-mobile-web-app-title" content="Heart of English" />
-    <meta name="theme-color" content="#991B2E" />
-    <title>Heart of English | Student Home</title>
+    <link rel="icon" type="image/x-icon" href="/assets/star-speaker/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/star-speaker/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/star-speaker/favicon-32x32.png" />
+    <link rel="shortcut icon" href="/assets/star-speaker/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/star-speaker/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/star-speaker/site.webmanifest" />
+    <meta name="application-name" content="Star Speaker" />
+    <meta name="apple-mobile-web-app-title" content="Star Speaker" />
+    <meta name="theme-color" content="#050505" />
+    <title>Star Speaker</title>
     <script>
       (function () {
         try {
-          var theme = localStorage.getItem("heartOfEnglishTheme");
-          document.documentElement.dataset.theme = theme === "dark" ? "dark" : "light";
+          document.documentElement.dataset.theme = "dark";
         } catch (error) {
-          document.documentElement.dataset.theme = "light";
+          document.documentElement.dataset.theme = "dark";
         }
       })();
     </script>

@@ -1,7 +1,7 @@
 export const themeAssets = {
   light: {
-    logo: "/assets/heart-of-english-logo-transparent.png",
-    appIcon: "/app-icon.png",
+    logo: "/assets/star-speaker/star-speaker-logo.png",
+    appIcon: "/assets/star-speaker/android-chrome-192x192.png",
     mascots: {
       celebration: "/mascots/mascot-celebration.png",
       encouragement: "/mascots/mascot-encouragement.png",
@@ -12,8 +12,8 @@ export const themeAssets = {
     }
   },
   dark: {
-    logo: "/assets/logo-heart-of-english-dark-transparent.png",
-    appIcon: "/assets/heart-of-english-app-icon-dark.png",
+    logo: "/assets/star-speaker/star-speaker-logo.png",
+    appIcon: "/assets/star-speaker/android-chrome-192x192.png",
     mascots: {
       celebration: "/assets/mascot-celebration-dark.png",
       encouragement: "/assets/mascot-encouragement-dark.png",
@@ -32,14 +32,14 @@ export function getThemeAssets(isDarkMode) {
 export function getLogoAsset(isDarkMode) {
   return {
     src: getThemeAssets(isDarkMode).logo,
-    fallbackSrc: themeAssets.light.logo
+    fallbackSrc: "/assets/star-speaker/star-speaker-logo.png"
   };
 }
 
 export function getAppIconAsset(isDarkMode) {
   return {
     src: getThemeAssets(isDarkMode).appIcon,
-    fallbackSrc: themeAssets.light.appIcon
+    fallbackSrc: "/assets/star-speaker/android-chrome-192x192.png"
   };
 }
 

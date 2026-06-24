@@ -84,7 +84,7 @@ export function MascotPreviewPage({ user, profile }) {
       <Header
         user={user}
         title="Mascot Preview"
-        subtitle="Review the Heart of English mascot poses and their production-ready animation styles."
+        subtitle="Review the Star Speaker guide poses and their production-ready animation styles."
       />
 
       <section className="mascot-preview-intro">

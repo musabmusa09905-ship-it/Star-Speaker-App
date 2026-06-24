@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const OPENING_SEEN_KEY = "heartOpeningSeen";
 const OPENING_DURATION_MS = 1700;
 const REDUCED_MOTION_DURATION_MS = 420;
-const APP_ICON_SRC = "/assets/heart-of-english-app-icon-dark.png";
+const APP_ICON_SRC = "/assets/star-speaker/android-chrome-192x192.png";
 
 function hasSeenOpening() {
   if (typeof window === "undefined") {
@@ -67,7 +67,7 @@ export function AppOpeningAnimation({ enabled = true }) {
       className={`app-opening-animation ${isReducedMotion ? "is-reduced-motion" : ""}`}
       role="status"
       aria-live="polite"
-      aria-label="Loading Heart of English"
+      aria-label="Loading Star Speaker"
     >
       <div className="app-opening-animation__lines" aria-hidden="true">
         <span className="app-opening-animation__line app-opening-animation__line--one" />
@@ -92,7 +92,7 @@ export function AppOpeningAnimation({ enabled = true }) {
         </div>
         <div className="app-opening-animation__copy">
           <h1>Welcome back</h1>
-          <p>Loading your speaking habit...</p>
+          <p>Loading your speaking practice...</p>
         </div>
         <div className="app-opening-animation__progress" aria-hidden="true">
           <span />

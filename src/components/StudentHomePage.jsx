@@ -495,7 +495,7 @@ function TodayHabitCard({ habit }) {
   return (
     <section className="card home-habit-card mascot-card mascot-card--compact" aria-labelledby="home-habit-title">
       <div className="mascot-card-content">
-        <p className="card-eyebrow card-eyebrow--red">Today's English habit</p>
+        <p className="card-eyebrow card-eyebrow--red">Today's speaking practice</p>
         <h2 id="home-habit-title">{habit.title}</h2>
         <p>{habit.message}</p>
       </div>
@@ -507,8 +507,8 @@ function TodayHabitCard({ habit }) {
           loop={!habit.isComplete}
           label={
             habit.isComplete
-              ? "Celebrating completed English habit"
-              : "Encouraging English habit mascot"
+              ? "Celebrating completed speaking practice"
+              : "Encouraging speaking practice guide"
           }
         />
       </div>

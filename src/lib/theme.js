@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 export const THEME_STORAGE_KEY = "heartOfEnglishTheme";
 export const THEME_CHANGE_EVENT = "heartOfEnglishThemeChange";
-export const THEMES = ["light", "dark"];
-const DEFAULT_THEME = "light";
+export const THEMES = ["dark"];
+const DEFAULT_THEME = "dark";
 
 function isValidTheme(theme) {
   return THEMES.includes(theme);
@@ -34,7 +34,7 @@ export function applyTheme(theme) {
     const themeColor = document.querySelector('meta[name="theme-color"]');
 
     if (themeColor) {
-      themeColor.setAttribute("content", isDarkTheme(safeTheme) ? "#0F1014" : "#991B2E");
+      themeColor.setAttribute("content", "#050505");
     }
   }
 

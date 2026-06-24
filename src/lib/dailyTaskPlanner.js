@@ -269,7 +269,7 @@ const studentProfiles = {
     estimatedMinutes: 10,
     weeklyFocus: "speaking clarity, vocabulary activation, consistent practice",
     note: "General focused practice.",
-    goal: "Build a consistent English habit."
+    goal: "Build consistent speaking confidence."
   }
 };
 
@@ -386,7 +386,7 @@ const dayTopics = {
     {
       key: "berna_day4_fluency_correction_target",
       title: "A Habit I Want to Change in English",
-      speaking: "Talk about one English habit or grammar mistake you want to change and why it still appears in your speaking.",
+      speaking: "Talk about one speaking pattern or grammar mistake you want to change and why it still appears in your speaking.",
       supportType: "vocabulary_activation",
       supportTitle: "Correction Without Losing Flow",
       phrases: ["old habit", "fossilized mistake", "correct myself", "slow down slightly", "keep my fluency", "build a better pattern"],

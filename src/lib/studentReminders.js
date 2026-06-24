@@ -41,8 +41,8 @@ const defaultPreferenceValues = {
 
 const reminderMessages = {
   morning: "Today's practice is ready. Start early. Small English output wins become confidence.",
-  midday: "Your English habit is waiting. Start with one focused task.",
-  evening: "Protect your English habit today with one submitted task.",
+  midday: "Your speaking practice is waiting. Start with one focused task.",
+  evening: "Protect your speaking progress today with one submitted task.",
   night: "One short task can still protect today's habit.",
   completed: "You showed up today. That is how English confidence is built.",
   noTask: "Your teacher has not assigned a practice task yet.",

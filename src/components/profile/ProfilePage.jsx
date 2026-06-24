@@ -122,9 +122,8 @@ function PracticeCommitmentCard({ learningProfile, isLoading, error }) {
 }
 
 function AppearanceCard() {
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
   const options = [
-    { value: "light", label: "Light" },
     { value: "dark", label: "Dark" }
   ];
 
@@ -136,14 +135,14 @@ function AppearanceCard() {
       <div>
         <p className="card-eyebrow card-eyebrow--red">Appearance</p>
         <h2 id="profile-appearance-title">Appearance</h2>
-        <p>Choose how Heart of English looks on this device.</p>
+        <p>Star Speaker uses a focused dark studio theme on this device.</p>
         <div className="profile-theme-toggle" role="group" aria-label="Choose app appearance">
           {options.map((option) => (
             <button
               type="button"
               className={theme === option.value ? "is-active" : ""}
               aria-pressed={theme === option.value}
-              onClick={() => setTheme(option.value)}
+              disabled
               key={option.value}
             >
               {option.label}
@@ -293,7 +292,7 @@ function PushNotificationsCard({ profile }) {
       <div>
         <p className="card-eyebrow card-eyebrow--red">Push Notifications</p>
         <h2 id="profile-push-title">Push Notifications</h2>
-        <p>Allow Heart of English to remind you when something needs your attention.</p>
+        <p>Allow Star Speaker to remind you when speaking practice or feedback needs your attention.</p>
         <p className="profile-push-role-copy">{getPushRoleCopy(profile?.role)}</p>
 
         <div className="profile-push-actions">

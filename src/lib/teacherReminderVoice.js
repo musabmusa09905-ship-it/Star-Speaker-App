@@ -34,7 +34,7 @@ const defaultReminderVoice = {
   style_notes: "",
   catchphrases: [],
   forbidden_style: "",
-  signature_name: "Heart of English",
+  signature_name: "Star Speaker",
   is_active: true
 };
 
@@ -43,7 +43,7 @@ const toneLanguage = {
     morningOpener: "A calm start is enough. One small step protects your rhythm.",
     taskContext: "Start with one short recording or one writing answer.",
     encouragement: "A small thing you do today can have a big impact tomorrow.",
-    afternoonCheckIn: "Your English habit is still waiting for you today.",
+    afternoonCheckIn: "Your speaking practice is still waiting for you today.",
     eveningDirect: "One last gentle nudge for today.",
     completed: "You showed up today. That is how quiet confidence is built.",
     defaultCatchphrase: "One small answer is enough."
@@ -682,7 +682,7 @@ export function generateReminderPreview({
 }) {
   const voice = mapTeacherReminderVoice(teacherVoice);
   const name = cleanText(studentName, "student");
-  const signature = cleanText(voice.signatureName, "Heart of English");
+  const signature = cleanText(voice.signatureName, "Star Speaker");
   const tone = voice.tone;
   const humorLevel = voice.humorLevel;
   const lines = getToneLanguage(tone);
@@ -710,7 +710,7 @@ export function generateReminderPreview({
   const messages = {
     morning_ready: withSignature(
       `${greeting}\n\n` +
-      "Your Heart of English tasks are ready for today.\n\n" +
+      "Your Star Speaker tasks are ready for today.\n\n" +
       `${lines.taskContext}\n\n` +
       `${catchphrase && catchphrase.length <= 70 ? `${catchphrase}\n\n` : ""}` +
       `${lines.encouragement}`,

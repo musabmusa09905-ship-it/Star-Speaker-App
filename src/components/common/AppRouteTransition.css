@@ -13,7 +13,7 @@
   align-items: center;
   gap: 10px;
   max-width: min(92vw, 320px);
-  border: 1px solid var(--color-crimson-border, rgba(153, 27, 46, 0.18));
+  border: 1px solid var(--color-crimson-border, rgba(216, 189, 122, 0.18));
   border-radius: var(--radius-pill, 999px);
   background: rgba(255, 255, 255, 0.94);
   color: var(--charcoal, #2d313a);
@@ -27,7 +27,7 @@
   height: 32px;
   flex: 0 0 auto;
   border-radius: var(--radius-md, 8px);
-  box-shadow: 0 8px 16px rgba(153, 27, 46, 0.14);
+  box-shadow: 0 8px 16px rgba(216, 189, 122, 0.14);
   object-fit: contain;
   animation: studentRouteIconPulse 260ms ease-out both;
 }

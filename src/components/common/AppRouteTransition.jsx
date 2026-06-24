@@ -10,8 +10,8 @@ export function AppRouteTransition({ isVisible, label = "Loading your space..." 
       <div className="student-route-transition__panel">
         <img
           className="student-route-transition__icon"
-          src="/app-icon.png"
-          alt="Heart of English app icon"
+          src="/assets/star-speaker/android-chrome-192x192.png"
+          alt="Star Speaker app icon"
           decoding="async"
         />
         <span>{label}</span>

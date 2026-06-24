@@ -713,7 +713,7 @@ export default function App() {
       <AuthStatusScreen
         isLoading
         title="Checking your session"
-        message="Please wait while we confirm your Heart of English account."
+        message="Please wait while we confirm your Star Speaker account."
       />
     );
   }

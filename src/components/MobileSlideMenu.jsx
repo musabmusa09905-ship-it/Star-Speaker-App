@@ -21,12 +21,12 @@ export function MobileSlideMenu({ activeTab, isOpen, navItems, user, onClose }) 
       <aside className={`mobile-slide-menu ${isOpen ? "is-open" : ""}`} aria-label="Full mobile navigation" aria-hidden={!isOpen}>
         <div className="mobile-slide-menu__top">
           <div className="mobile-drawer-logo-panel">
-            <a className="mobile-drawer-logo" href="/" aria-label="Heart of English home" onClick={onClose}>
+            <a className="mobile-drawer-logo" href="/" aria-label="Star Speaker home" onClick={onClose}>
               <img
                 className="mobile-drawer-logo__image"
                 src={logoAsset.src}
                 data-fallback-src={logoAsset.fallbackSrc}
-                alt="Heart of English"
+                alt="Star Speaker"
                 decoding="async"
                 onError={replaceWithFallbackImage}
               />

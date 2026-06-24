@@ -9,10 +9,10 @@
   max-width: 100%;
   flex: 0 0 auto;
   overflow: hidden;
-  border: 1px solid rgba(153, 27, 46, 0.12);
+  border: 1px solid rgba(216, 189, 122, 0.12);
   border-radius: 18px;
   background:
-    radial-gradient(circle at 62% 14%, rgba(153, 27, 46, 0.12), transparent 48%),
+    radial-gradient(circle at 62% 14%, rgba(216, 189, 122, 0.12), transparent 48%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 247, 0.74));
   box-shadow:
     0 14px 32px rgba(31, 24, 22, 0.08),
@@ -60,14 +60,14 @@
 
 .mascot-frame--soft {
   background:
-    radial-gradient(circle at 60% 12%, rgba(153, 27, 46, 0.1), transparent 48%),
+    radial-gradient(circle at 60% 12%, rgba(216, 189, 122, 0.1), transparent 48%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 247, 249, 0.72));
 }
 
 .mascot-frame--dark {
   border-color: rgba(255, 255, 255, 0.08);
   background:
-    radial-gradient(circle at 48% 12%, rgba(176, 18, 45, 0.2), transparent 48%),
+    radial-gradient(circle at 48% 12%, rgba(216, 189, 122, 0.2), transparent 48%),
     linear-gradient(145deg, #1d202a, #11131a);
   box-shadow:
     0 18px 44px rgba(0, 0, 0, 0.22),
@@ -89,7 +89,7 @@
 html[data-theme="dark"] .mascot-frame {
   border-color: rgba(255, 255, 255, 0.08);
   background:
-    radial-gradient(circle at 56% 16%, rgba(176, 18, 45, 0.18), transparent 46%),
+    radial-gradient(circle at 56% 16%, rgba(216, 189, 122, 0.18), transparent 46%),
     linear-gradient(145deg, rgba(35, 38, 49, 0.95), rgba(17, 19, 26, 0.96));
   box-shadow:
     0 18px 44px rgba(0, 0, 0, 0.26),
@@ -110,7 +110,7 @@ html[data-theme="dark"] .mascot-frame--card {
 
 html[data-theme="dark"] .mascot-frame--soft {
   background:
-    radial-gradient(circle at 54% 16%, rgba(176, 18, 45, 0.16), transparent 46%),
+    radial-gradient(circle at 54% 16%, rgba(216, 189, 122, 0.16), transparent 46%),
     linear-gradient(145deg, rgba(29, 32, 42, 0.94), rgba(17, 19, 26, 0.94));
 }
 

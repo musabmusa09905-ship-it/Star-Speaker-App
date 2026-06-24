@@ -144,7 +144,7 @@ export function MascotAnimation({
   const resolvedSize = VALID_SIZES.has(size) ? size : "medium";
   const resolvedMotion = getMotion(motion, resolvedType);
   const shouldLoop = typeof loop === "boolean" ? loop : resolvedType !== "celebration";
-  const alt = label || `${config.label} Heart of English mascot`;
+  const alt = label || `${config.label} Star Speaker guide`;
   const mascotAsset = getMascotAsset(type, isDark);
   const imageSrc = src || mascotAsset.src;
   const fallbackSrc = src ? config.src : mascotAsset.fallbackSrc;
